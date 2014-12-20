@@ -1,1 +1,28 @@
-{{outlet}}
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Reauthenticate</h3>
+  </div>
+
+  <form {{action 'reauthenticate' on='submit'}}>
+    <div class="panel-body">
+
+      <div class="form-group has-feedback">
+        <label>Email address</label>
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        {{input value=user.email type="text" class="form-control" placeholder="pete123@mail.chapman.edu"}}
+      </div>
+
+      <div class="form-group has-feedback">
+        <label>Session password</label>
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        {{input value=user.password type="password" class="form-control"}}
+      </div>
+
+    </div>
+
+    <div class="panel-footer">
+      <button type="submit" class="btn btn-primary">Submit</button>
+      {{link-to 'New Participant' 'session.create' class='pull-right btn btn-link'}}
+    </div>
+  </form>
+</div>

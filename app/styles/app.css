@@ -1,3 +1,55 @@
-html, body {
-  margin: 20px;
+body {
+  padding-top: 90px;
+}
+
+div.session {
+  padding-top: 100px;
+  background-color: #000;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+.session .form-group.has-feedback > input {
+  padding-left: 32px;
+}
+
+.session .form-group.has-feedback > span {
+  left: 0;
+}
+
+
+.container {
+  width: 900px;
+}
+
+
+table.matrix td, table.matrix th {
+  text-align: center;
+  vertical-align: middle !important;
+}
+
+
+dl.matrix {
+  margin-right: -10px;
+  margin-left:   10px;
+  margin-bottom:  0px;
+  margin-top:     0px;
+}
+
+dl.matrix > dt {
+  width:       20px;
+  overflow:    visible;
+  font-weight: 300;
+  margin-right: 10px;
+}
+
+dl.matrix > dt.you {
+  color: #31708f
+}
+
+dl.matrix > dd {
+  margin-left: 0px;
 }

@@ -1,0 +1,111 @@
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <span class="navbar-brand">User {{user.id}}</span>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><p class="navbar-text">Block: {{block}}</p></li>
+        <li><p class="navbar-text">Period: {{period}}</p></li>
+        <li><p class="navbar-text">Stage: {{stage}}</p></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+
+<div class="container">
+  <div class="row">
+
+
+    <!-- Left -->
+    <div class="col-md-5">
+      <div class="row">
+        <div class="col-sm-12">
+        <table class="table table-bordered matrix">
+          <tbody>
+            <tr>
+              <td rowspan="2" colspan="2"></td>
+              <th colspan="2">Other</td>
+            </tr>
+            <tr>
+              <th>X</th>
+              <th>Y</th>
+            </tr>
+            <tr>
+              <th rowspan="2" class="text-info">You</th>
+              <th>X</th>
+              <td>
+                <dl class="dl-horizontal matrix">
+                  <dt class="you">You</dt>
+                  <dd>10</dd>
+                  <dt>Other</dt>
+                  <dd>10</dd>
+                </dl>
+              </td>
+              <td>
+                <dl class="dl-horizontal matrix">
+                  <dt class="you">You</dt>
+                  <dd>15</dd>
+                  <dt>Other</dt>
+                  <dd>5</dd>
+                </dl>
+              </td>
+            </tr>
+            <tr>
+              <th>Y</th>
+              <td>
+                <dl class="dl-horizontal matrix">
+                  <dt class="you">You</dt>
+                  <dd>5</dd>
+                  <dt>Other</dt>
+                  <dd>15</dd>
+                </dl>
+              </td>
+              <td>
+                <dl class="dl-horizontal matrix">
+                  <dt class="you">You</dt>
+                  <dd>5</dd>
+                  <dt>Other</dt>
+                  <dd>5</dd>
+                </dl>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      </div>
+    </div>
+
+    <!-- Right -->
+    <div class="col-md-6 col-md-offset-1">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Please make a choice</h3>
+        </div>
+        <div class="panel-body">
+          <form {{action 'makeChoice' on='submit'}}>
+            <div class="radio">
+              <label>
+                <input type="radio" value="">
+                X
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" value="">
+                Y
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <br><br>
+</div>
+
+
+{{outlet}}

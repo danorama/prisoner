@@ -6,10 +6,12 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  //this.route('')
-  this.route('session');
-  this.route('session/login');
-  this.route('session/create');
+  this.resource('session', function() {
+    this.route('create');
+    this.route('login');
+    this.route('wait');
+  });
+  this.resource('experiment');
 });
 
 export default Router;
